@@ -1,0 +1,40 @@
+﻿@page "/"
+@inherits IndexModel
+@inject NavigationManager NavigationManager
+
+
+<EditForm Model="this" OnSubmit="Send">
+    <div class="form-group">
+        <label>User:</label>
+        <input @bind="userInput" />
+    </div>
+    <div class="form-group">
+        <label>Message:</label>
+        <input @bind="messageInput" size="50" />
+    </div>
+    <button type="submit" disabled="@(!IsConnected)">Send</button>
+</EditForm>
+
+@if (ErrorMessage != null)
+{
+    <div CornerRadius="10" BackgroundColor="Color.IndianRed">
+        <div Orientation="StackOrientation.Horizontal" HorizontalOptions="LayoutOptions.Center">
+            <label FontAttributes="FontAttributes.Bold"
+                   VerticalTextAlignment="TextAlignment.Center">
+                @ErrorMessage
+            </label>
+            <button @onclick="HandleRetryConnection">
+                Try To Connect?
+            </button>
+        </div>
+    </div>
+}
+
+<hr />
+
+<ul id="messagesList" style="display: flex; flex-direction: column-reverse;">
+    @foreach (var message in messages)
+    {
+        <li>@message</li>
+    }
+</ul>

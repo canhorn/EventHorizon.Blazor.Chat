@@ -1,0 +1,56 @@
+﻿@inherits ChatPageModel
+
+<ContentPage Title="Chat">
+    <StackLayout Margin="20" VerticalOptions="LayoutOptions.End">
+        <Grid>
+            <Layout>
+                <RowDefinition GridUnitType="GridUnitType.Star" />
+                <RowDefinition GridUnitType="GridUnitType.Auto" />
+                <ColumnDefinition GridUnitType="GridUnitType.Star" />
+            </Layout>
+            <Contents>
+                <GridCell Row="0">
+                    <ScrollView @ref="ScrollView">
+                        <StackLayout>
+                            @foreach (var message in messages)
+                            {
+                                <Label Text="@message"></Label>
+                            }
+
+                        </StackLayout>
+                    </ScrollView>
+                </GridCell>
+                <GridCell Row="1">
+                    <StackLayout>
+                        <Label Text="User:" />
+                        <Entry @bind-Text="userInput"
+                               MinimumHeightRequest="60"
+                               IsEnabled="IsConnected" />
+                        <Label Text="Message:" />
+                        <Entry @bind-Text="messageInput"
+                               @ref="messageInputEntry"
+                               MinimumHeightRequest="60"
+                               OnCompleted="Send" />
+
+                        <Button Text="Send"
+                                OnClick="Send"
+                                IsEnabled="IsConnected" />
+
+                        @if (ErrorMessage != null)
+                        {
+                            <Frame CornerRadius="10" BackgroundColor="Color.IndianRed">
+                                <StackLayout Orientation="StackOrientation.Horizontal" HorizontalOptions="LayoutOptions.Center">
+                                    <Label Text="@ErrorMessage"
+                                           FontAttributes="FontAttributes.Bold"
+                                           VerticalTextAlignment="TextAlignment.Center" />
+                                    <Button Text="Try To Connect?" OnClick="@HandleRetryConnection" />
+                                </StackLayout>
+                            </Frame>
+                        }
+                    </StackLayout>
+                </GridCell>
+            </Contents>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
