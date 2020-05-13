@@ -95,7 +95,7 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventHorizon.Mobile.Blazor.Demo\EventHorizon.Blazor.Chat.Mobile.csproj">
+    <ProjectReference Include="..\EventHorizon.Blazor.Chat.Mobile\EventHorizon.Blazor.Chat.Mobile.csproj">
       <Project>{20D25BF1-C4A8-4B17-A6F8-B71A048A228F}</Project>
       <Name>EventHorizon.Blazor.Chat.Mobile</Name>
     </ProjectReference>

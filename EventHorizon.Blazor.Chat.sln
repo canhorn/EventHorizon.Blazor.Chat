@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{87E5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{DCD5700C-D1C2-400A-AF5E-5F8EE1BC2025}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.Chat.Mobile", "Clients\Mobile\EventHorizon.Mobile.Blazor.Demo\EventHorizon.Blazor.Chat.Mobile.csproj", "{20D25BF1-C4A8-4B17-A6F8-B71A048A228F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.Chat.Mobile", "Clients\Mobile\EventHorizon.Blazor.Chat.Mobile\EventHorizon.Blazor.Chat.Mobile.csproj", "{20D25BF1-C4A8-4B17-A6F8-B71A048A228F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHorizon.Blazor.Chat.Mobile.Android", "Clients\Mobile\EventHorizon.Mobile.Blazor.Demo.Android\EventHorizon.Blazor.Chat.Mobile.Android.csproj", "{23AAFE20-F45E-4A26-BB7D-3F1CB0722E63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHorizon.Blazor.Chat.Mobile.Android", "Clients\Mobile\EventHorizon.Blazor.Chat.Mobile.Android\EventHorizon.Blazor.Chat.Mobile.Android.csproj", "{23AAFE20-F45E-4A26-BB7D-3F1CB0722E63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{E262E811-E6DF-4ADE-B7F2-F58A57000962}"
 EndProject
