@@ -2,6 +2,8 @@
 
 This is yet another Chat application, but with three clients; Website, Desktop and Mobile. The twist is they are all using Blazor in some form or fashion.
 
+Checkout the blog article: [Blazor - The Big Three - Desktop/Mobile/Website](https://codyanhorn.tech/blog/blazor/2020/05/12/Blazor-Chat-Client-Desktop-Mobile-Website.html)
+
 # Project
 
 This project uses three different types of Blazor.
